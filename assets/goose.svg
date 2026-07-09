@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <defs>
+    <radialGradient id="bodyGrad" cx="50%" cy="60%" r="50%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F0EDE8"/>
+    </radialGradient>
+    <radialGradient id="headGrad" cx="45%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#EDE9E3"/>
+    </radialGradient>
+    <radialGradient id="blushGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFB5C8" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="#FFB5C8" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Body - chubby round -->
+  <ellipse cx="60" cy="78" rx="34" ry="30" fill="url(#bodyGrad)" stroke="#E8E0D5" stroke-width="1"/>
+
+  <!-- Wing detail left -->
+  <ellipse cx="34" cy="76" rx="10" ry="16" fill="#F5F0EB" stroke="#E0D8D0" stroke-width="0.8" transform="rotate(-15 34 76)"/>
+
+  <!-- Wing detail right -->
+  <ellipse cx="86" cy="76" rx="10" ry="16" fill="#F5F0EB" stroke="#E0D8D0" stroke-width="0.8" transform="rotate(15 86 76)"/>
+
+  <!-- Body highlight -->
+  <ellipse cx="52" cy="68" rx="10" ry="8" fill="white" opacity="0.5"/>
+
+  <!-- Neck -->
+  <rect x="50" y="50" width="20" height="16" rx="8" fill="url(#bodyGrad)" stroke="#E8E0D5" stroke-width="0.5"/>
+
+  <!-- Head -->
+  <ellipse cx="60" cy="42" rx="20" ry="18" fill="url(#headGrad)" stroke="#E8E0D5" stroke-width="1"/>
+
+  <!-- Head highlight -->
+  <ellipse cx="53" cy="36" rx="7" ry="5" fill="white" opacity="0.4"/>
+
+  <!-- Blush left -->
+  <ellipse cx="44" cy="45" rx="7" ry="5" fill="url(#blushGrad)"/>
+
+  <!-- Blush right -->
+  <ellipse cx="76" cy="45" rx="7" ry="5" fill="url(#blushGrad)"/>
+
+  <!-- Eye left -->
+  <circle cx="51" cy="40" r="3.5" fill="#3D3530"/>
+  <circle cx="52.2" cy="38.8" r="1.2" fill="white" opacity="0.8"/>
+
+  <!-- Eye right -->
+  <circle cx="69" cy="40" r="3.5" fill="#3D3530"/>
+  <circle cx="70.2" cy="38.8" r="1.2" fill="white" opacity="0.8"/>
+
+  <!-- Beak -->
+  <ellipse cx="60" cy="53" rx="8" ry="5" fill="#FF9F7A" stroke="#F08060" stroke-width="0.5"/>
+  <line x1="52" y1="53" x2="68" y2="53" stroke="#F08060" stroke-width="0.8" opacity="0.5"/>
+
+  <!-- Bow ribbon on neck - left loop -->
+  <ellipse cx="51" cy="63" rx="9" ry="5.5" fill="#FFB5C8" stroke="#FF9AB5" stroke-width="0.8" transform="rotate(-20 51 63)"/>
+
+  <!-- Bow ribbon on neck - right loop -->
+  <ellipse cx="69" cy="63" rx="9" ry="5.5" fill="#FFB5C8" stroke="#FF9AB5" stroke-width="0.8" transform="rotate(20 69 63)"/>
+
+  <!-- Bow knot center -->
+  <ellipse cx="60" cy="63" rx="5" ry="4" fill="#FF85A8" stroke="#FF6A9A" stroke-width="0.5"/>
+
+  <!-- Bow tails -->
+  <polygon points="55,64 49,71 51,72 57,65" fill="#FFB5C8" stroke="#FF9AB5" stroke-width="0.5"/>
+  <polygon points="65,64 71,71 69,72 63,65" fill="#FFB5C8" stroke="#FF9AB5" stroke-width="0.5"/>
+
+  <!-- Feet left -->
+  <ellipse cx="48" cy="107" rx="9" ry="4" fill="#FF9F7A" stroke="#F08060" stroke-width="0.8"/>
+  <rect x="40" y="100" width="5" height="9" rx="2.5" fill="#FF9F7A" stroke="#F08060" stroke-width="0.8"/>
+  <!-- Toe details left -->
+  <ellipse cx="38" cy="107" rx="4" ry="2.5" fill="#FF9F7A" stroke="#F08060" stroke-width="0.6"/>
+  <ellipse cx="44" cy="109" rx="4" ry="2.5" fill="#FF9F7A" stroke="#F08060" stroke-width="0.6"/>
+  <ellipse cx="50" cy="109" rx="4" ry="2.5" fill="#FF9F7A" stroke="#F08060" stroke-width="0.6"/>
+
+  <!-- Feet right -->
+  <ellipse cx="72" cy="107" rx="9" ry="4" fill="#FF9F7A" stroke="#F08060" stroke-width="0.8"/>
+  <rect x="75" y="100" width="5" height="9" rx="2.5" fill="#FF9F7A" stroke="#F08060" stroke-width="0.8"/>
+  <!-- Toe details right -->
+  <ellipse cx="70" cy="109" rx="4" ry="2.5" fill="#FF9F7A" stroke="#F08060" stroke-width="0.6"/>
+  <ellipse cx="76" cy="109" rx="4" ry="2.5" fill="#FF9F7A" stroke="#F08060" stroke-width="0.6"/>
+  <ellipse cx="82" cy="107" rx="4" ry="2.5" fill="#FF9F7A" stroke="#F08060" stroke-width="0.6"/>
+</svg>

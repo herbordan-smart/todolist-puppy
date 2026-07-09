@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <ellipse cx="60" cy="100" rx="42" ry="8" fill="#FFF0E0" stroke="#222" stroke-width="2.5"/>
+  <ellipse cx="55" cy="82" rx="30" ry="16" fill="white" stroke="#222" stroke-width="3.5"/>
+  <circle cx="30" cy="76" r="16" fill="white" stroke="#222" stroke-width="3.5"/>
+  <ellipse cx="16" cy="70" rx="7" ry="10" fill="white" stroke="#222" stroke-width="3" transform="rotate(-20 16 70)"/>
+  <ellipse cx="36" cy="88" rx="7" ry="5" fill="white" stroke="#222" stroke-width="3"/>
+  <path d="M24 74 Q27 77 30 74" stroke="#222" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M34 74 Q37 77 40 74" stroke="#222" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="32" cy="79" r="3" fill="#222"/>
+  <circle cx="22" cy="78" r="4" fill="#FFB5C8" opacity="0.4"/>
+  <circle cx="42" cy="78" r="4" fill="#FFB5C8" opacity="0.4"/>
+  <path d="M25 88 Q35 78 60 75 Q85 72 95 82 Q98 88 95 95 L25 95 Z" fill="#FFB5C8" stroke="#222" stroke-width="3" opacity="0.85"/>
+  <path d="M50 83 Q50 80 53 80 Q56 80 56 83 Q56 86 53 88 Q50 86 50 83Z" fill="white" opacity="0.6"/>
+  <path d="M68 81 Q68 78 71 78 Q74 78 74 81 Q74 84 71 86 Q68 84 68 81Z" fill="white" opacity="0.6"/>
+  <path d="M85 80 Q95 75 92 68" stroke="#222" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <circle cx="92" cy="66" r="4" fill="white" stroke="#222" stroke-width="2.5"/>
+  <text x="75" y="55" font-family="sans-serif" font-size="11" font-weight="bold" fill="#222" opacity="0.7">z</text>
+  <text x="85" y="42" font-family="sans-serif" font-size="15" font-weight="bold" fill="#222" opacity="0.6">Z</text>
+  <text x="97" y="26" font-family="sans-serif" font-size="20" font-weight="bold" fill="#222" opacity="0.5">Z</text>
+</svg>

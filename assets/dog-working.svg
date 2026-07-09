@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect x="5" y="82" width="110" height="6" rx="3" fill="#FFF5E6" stroke="#222" stroke-width="3"/>
+  <rect x="42" y="62" width="36" height="20" rx="3" fill="#E8E8E8" stroke="#222" stroke-width="3"/>
+  <rect x="46" y="65" width="28" height="14" rx="1" fill="#D0E8FF" stroke="#222" stroke-width="1.5"/>
+  <line x1="50" y1="70" x2="62" y2="70" stroke="#88AACC" stroke-width="1.2"/>
+  <line x1="50" y1="74" x2="70" y2="74" stroke="#88AACC" stroke-width="1.2"/>
+  <line x1="50" y1="78" x2="58" y2="78" stroke="#88AACC" stroke-width="1.2"/>
+  <rect x="38" y="80" width="44" height="4" rx="2" fill="#DDD" stroke="#222" stroke-width="2.5"/>
+  <ellipse cx="40" cy="68" rx="22" ry="16" fill="white" stroke="#222" stroke-width="3.5"/>
+  <circle cx="28" cy="56" r="16" fill="white" stroke="#222" stroke-width="3.5"/>
+  <ellipse cx="14" cy="48" rx="8" ry="12" fill="white" stroke="#222" stroke-width="3" transform="rotate(-15 14 48)"/>
+  <ellipse cx="42" cy="48" rx="8" ry="12" fill="white" stroke="#222" stroke-width="3" transform="rotate(15 42 48)"/>
+  <path d="M22 55 Q25 58 28 55" stroke="#222" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M32 55 Q35 58 38 55" stroke="#222" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <circle cx="30" cy="60" r="3" fill="#222"/>
+  <path d="M27 63 Q30 66 33 63" stroke="#222" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+  <circle cx="20" cy="60" r="4" fill="#FFB5C8" opacity="0.4"/>
+  <circle cx="40" cy="60" r="4" fill="#FFB5C8" opacity="0.4"/>
+  <ellipse cx="50" cy="82" rx="8" ry="5" fill="white" stroke="#222" stroke-width="2.5"/>
+  <ellipse cx="66" cy="82" rx="8" ry="5" fill="white" stroke="#222" stroke-width="2.5"/>
+  <path d="M62 65 Q72 55 68 45" stroke="#222" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <rect x="88" y="70" width="14" height="14" rx="3" fill="white" stroke="#222" stroke-width="2.5"/>
+  <path d="M102 74 Q108 74 108 80 Q108 86 102 86" stroke="#222" stroke-width="2" fill="none"/>
+  <rect x="90" y="72" width="10" height="10" rx="2" fill="#8B4513" opacity="0.6"/>
+</svg>
