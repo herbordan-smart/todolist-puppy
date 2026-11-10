@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>待办列表</title>
+  <link rel="stylesheet" href="panel.css"/>
+</head>
+<body>
+  <div id="panel">
+    <div id="header">
+      <div id="title-row">
+        <div id="title-wrap">
+          <span id="title">我的任务栏</span>
+          <span id="title-date"></span>
+        </div>
+        <div id="title-actions">
+          <button id="report-btn" title="打开报告">📅</button>
+          <button id="close-btn" title="关闭">×</button>
+        </div>
+      </div>
+      <div id="progress-container">
+        <div id="progress-bar">
+          <div id="progress-fill"></div>
+        </div>
+        <span id="progress-text">0 / 0 完成</span>
+      </div>
+    </div>
+    <div id="todo-list-wrap">
+      <ul id="todo-list"></ul>
+      <div id="empty-state" class="hidden">
+        <p>还没有任务哦，摸摸小狗~ 🐶</p>
+      </div>
+    </div>
+    <div id="input-area">
+      <input
+        id="todo-input"
+        type="text"
+        placeholder="添加新任务..."
+        maxlength="100"
+        autocomplete="off"
+        spellcheck="false"
+      />
+      <button id="add-btn" title="添加">+</button>
+    </div>
+  </div>
+  <div id="drop-indicator"></div>
+  <script src="demo-shim.js"></script>
+  <script src="panel.js"></script>
+</body>
+</html>

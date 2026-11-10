@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Puppy Todo · 住在桌面角落的任务小狗</title>
+<meta name="description" content="一只常驻桌面右下角的小狗，用表情告诉你今天的任务进展。桌面宠物端 + 网页端报告，在线可体验。"/>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-font-smoothing: antialiased; }
+:root { --bg: #FFFDF5; --yellow: #FFE566; --amber: #FFB800; --pink: #FFB5C8; --brown: #5C4A3A; --brown2: #A09080; --line: #EDE8DF; --soft: #F5F0E8; --yb: #FFF8E1; --pb: #FFF0F4; --gb: #F6FFED; }
+html, body { overflow-x: hidden; }
+body { font-family: system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif; background: var(--bg); color: var(--brown); line-height: 1.7; }
+a { color: inherit; }
+.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+nav { position: relative; z-index: 5; display: flex; align-items: center; justify-content: space-between; padding: 22px 0; }
+nav .logo { font-weight: 800; font-size: 20px; }
+nav .links a { margin-left: 22px; text-decoration: none; font-size: 15px; color: var(--brown2); font-weight: 600; }
+nav .links a:hover { color: var(--brown); }
+
+.hero { position: relative; display: grid; grid-template-columns: 1.1fr .9fr; gap: 24px; align-items: center; padding: 30px 0 70px; }
+.hero .blob { position: absolute; z-index: 0; border-radius: 50%; }
+.hero .t { position: relative; z-index: 1; }
+.kicker { font-size: 13px; letter-spacing: 4px; font-weight: 800; color: var(--amber); }
+h1 { font-size: 76px; line-height: 1.05; font-weight: 900; letter-spacing: -1px; margin-top: 12px; }
+.tag { font-size: 28px; font-weight: 800; margin-top: 14px; }
+.desc { font-size: 18px; color: var(--brown2); margin-top: 14px; max-width: 520px; }
+.cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+.btn { display: inline-block; text-decoration: none; padding: 13px 22px; border-radius: 16px; font-weight: 700; font-size: 16px; background: #fff; border: 1.5px solid var(--line); }
+.btn.y { background: linear-gradient(135deg, #FFE566, #FFCD3C); color: #7A6000; border: none; box-shadow: 0 6px 18px rgba(255,205,60,.45); }
+.btn:hover { transform: translateY(-1px); }
+.hero .pics { position: relative; z-index: 1; height: 420px; }
+.hero .pics img { position: absolute; filter: drop-shadow(0 14px 20px rgba(120,90,60,.22)); }
+
+section { padding: 36px 0; }
+h2 { font-size: 34px; font-weight: 900; }
+.sub { color: var(--brown2); font-size: 17px; margin-top: 4px; }
+.grid4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; margin-top: 26px; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 26px; align-items: start; }
+.card { background: #fff; border: 1px solid var(--line); border-radius: 24px; padding: 24px; }
+.card h3 { font-size: 20px; font-weight: 800; }
+.card p { font-size: 15px; color: var(--brown2); margin-top: 6px; }
+.state { text-align: center; }
+.state .st { height: 150px; border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+.state img { max-width: 140px; max-height: 130px; filter: drop-shadow(0 8px 10px rgba(120,90,60,.2)); }
+.state code { display: inline-block; margin-top: 8px; font-size: 13px; background: var(--soft); border-radius: 8px; padding: 2px 10px; font-family: ui-monospace, Menlo, monospace; }
+.shot { background: #fff; border: 1px solid var(--line); border-radius: 18px; overflow: hidden; box-shadow: 0 18px 40px rgba(120,90,60,.14); }
+.shot img { display: block; width: 100%; }
+.shot.panel { background: radial-gradient(circle at 50% 40%, #FFF3BF 0%, #FFF8E1 60%, #FFFDF5 100%); padding: 10px; text-align: center; }
+.shot.panel img { width: auto; max-height: 560px; margin: 0 auto; }
+.cap { font-size: 14px; color: var(--brown2); margin-top: 10px; text-align: center; }
+pre { background: var(--brown); color: #FFF3C4; border-radius: 18px; padding: 20px 24px; font-size: 15px; overflow-x: auto; margin-top: 18px; line-height: 1.9; }
+.note { margin-top: 14px; font-size: 14px; color: var(--brown2); }
+footer { border-top: 1px solid var(--line); margin-top: 40px; padding: 28px 0 44px; font-size: 14px; color: var(--brown2); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; }
+@media (max-width: 860px) {
+  .hero { grid-template-columns: 1fr; } h1 { font-size: 56px; } .hero .pics { height: 320px; }
+  .grid4 { grid-template-columns: 1fr 1fr; } .grid2 { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><div class="logo">&#128062; Puppy Todo</div>
+    <div class="links"><a href="desktop.html">桌面端</a><a href="report.html">网页报告</a><a href="https://github.com/herbordan-smart/todolist-puppy">GitHub</a></div></nav>
+
+  <header class="hero">
+    <div class="blob" style="right:-120px;top:-60px;width:560px;height:560px;background:#FFF0B3"></div>
+    <div class="blob" style="right:60px;bottom:-30px;width:200px;height:200px;background:#FFD3DF"></div>
+    <div class="t">
+      <div class="kicker">DESKTOP PET · TASK MANAGER</div>
+      <h1>Puppy<br/>Todo</h1>
+      <div class="tag">住在桌面角落的任务小狗</div>
+      <p class="desc">一只常驻桌面右下角的小狗，用表情告诉你今天的任务进展。桌面宠物端负责「此刻」，网页端报告负责「回顾」。</p>
+      <div class="cta">
+        <a class="btn y" href="desktop.html">体验桌面宠物端</a>
+        <a class="btn" href="report.html">体验网页端报告</a>
+        <a class="btn" href="https://github.com/herbordan-smart/todolist-puppy">查看源码</a>
+      </div>
+    </div>
+    <div class="pics">
+      <img src="dog-waiting.png" style="left:70px;top:40px;width:270px" alt=""/>
+      <img src="dog-playing.png" style="right:0;top:0;width:200px" alt=""/>
+      <img src="dog-working.png" style="left:0;bottom:10px;width:230px" alt=""/>
+      <img src="dog-ready.png" style="right:30px;bottom:20px;width:180px" alt=""/>
+    </div>
+  </header>
+
+  <section>
+    <h2>小狗的 4 种状态</h2>
+    <p class="sub">状态由任务数据自动判定，按优先级只呈现一种。</p>
+    <div class="grid4">
+      <div class="card state"><div class="st" style="background:var(--yb)"><img src="dog-working.png" alt=""/></div><h3>工作中</h3><code>进行中任务 &gt; 0</code><p>有任务正在进行，陪你一起专注。</p></div>
+      <div class="card state"><div class="st" style="background:var(--pb)"><img src="dog-ready.png" alt=""/></div><h3>准备出发</h3><code>待办任务 &gt; 0</code><p>清单里还有事，轻轻催你开始。</p></div>
+      <div class="card state"><div class="st" style="background:var(--gb)"><img src="dog-playing.png" alt=""/></div><h3>开心玩耍</h3><code>今日有完成 且 无待办</code><p>今天的任务清零，这是给你的奖励。</p></div>
+      <div class="card state"><div class="st" style="background:var(--soft)"><img src="dog-waiting.png" alt=""/></div><h3>安静等待</h3><code>以上都不满足</code><p>还没有任务，摸摸小狗添加第一条吧。</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>两个端，一份数据</h2>
+    <p class="sub">在任一端修改任务，另一端即时同步。</p>
+    <div class="grid2">
+      <div>
+        <div class="shot panel"><img src="shot-panel.png" alt="桌面端任务面板"/></div>
+        <p class="cap"><b>桌面宠物端</b> · 三态任务面板：进行中 / 待办 / 完成，点圆圈一键切换，拖拽排序，双击编辑</p>
+        <div class="cta" style="justify-content:center"><a class="btn y" href="desktop.html">在线体验 &rarr;</a></div>
+      </div>
+      <div>
+        <div class="shot"><img src="shot-dashboard.png" alt="网页端仪表盘"/></div>
+        <p class="cap"><b>网页端报告</b> · 年 / 月 / 日三级日历 + 仪表盘，复盘每一天做了什么</p>
+        <div class="cta" style="justify-content:center"><a class="btn y" href="report.html">在线体验 &rarr;</a></div>
+      </div>
+    </div>
+    <div class="grid2" style="margin-top:34px">
+      <div><div class="shot"><img src="shot-year.png" alt="年视图热力图"/></div><p class="cap">年视图 · 完成热力图</p></div>
+      <div><div class="shot"><img src="shot-day.png" alt="日视图时间轴"/></div><p class="cap">日视图 · 24 小时时间轴（含「进行中」耗时）</p></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>安装到你的 Mac</h2>
+    <p class="sub">真正的桌面宠物是 Electron 应用，需要 macOS 与 Node.js 18+。</p>
+    <pre>git clone https://github.com/herbordan-smart/todolist-puppy.git
+cd todolist-puppy
+npm install
+npx electron .</pre>
+    <p class="note">本页的在线演示是浏览器模拟：界面与交互复用真实代码，数据只保存在你当前浏览器的 localStorage 中（示例数据每天自动重置），不会上传。</p>
+  </section>
+
+  <footer><span>Puppy Todo · 个人项目</span><span><a href="https://github.com/herbordan-smart/todolist-puppy">github.com/herbordan-smart/todolist-puppy</a></span></footer>
+</div>
+</body>
+</html>
